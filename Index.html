@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohammed Al-Zeetry – Cabin Crew Applicant</title>
+<meta name="description" content="Digital business card of Mohammed Mustafa Al-Zeetry – Cabin Crew Applicant">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+:root {
+  --primary: #0b1f3a; --primary-light: #163360; --primary-dark: #060f1d;
+  --accent: #c8a84b; --accent-light: #e0c068; --accent-dark: #a8882c;
+  --sky: #5ba3d0;
+  --bg: #f7f4ef; --bg-card: #ffffff; --bg-alt: #eeeae3;
+  --text: #1a1a2e; --text-sec: #4a4a6a; --text-muted: #888; --border: #ddd8ce;
+  --shadow-sm: 0 1px 4px rgba(0,0,0,0.08);
+  --shadow-md: 0 6px 20px rgba(0,0,0,0.1);
+  --shadow-lg: 0 16px 40px rgba(0,0,0,0.14);
+  --shadow-gold: 0 4px 20px rgba(200,168,75,0.35);
+  --hero-bg: linear-gradient(160deg, #060f1d 0%, #0b1f3a 40%, #163360 80%, #0f2a50 100%);
+  --font-heading: 'Cormorant Garamond', serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-ar: 'Noto Naskh Arabic', serif;
+  --navbar-bg: rgba(247,244,239,0.9);
+  --section-pad: 5.5rem; --max-w: 1180px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+[data-theme="dark"] {
+  --bg: #080f1c; --bg-card: #111827; --bg-alt: #0d1729;
+  --text: #f0ece3; --text-sec: #aab0c0; --text-muted: #6b7080; --border: #1e2d45;
+  --navbar-bg: rgba(8,15,28,0.92);
+  --shadow-sm: 0 1px 4px rgba(0,0,0,0.3); --shadow-md: 0 6px 20px rgba(0,0,0,0.4); --shadow-lg: 0 16px 40px rgba(0,0,0,0.55);
+}
+
+/* ── Arabic font overrides ── */
+[lang="ar"] body, [lang="ar"] p, [lang="ar"] li,
+[lang="ar"] label, [lang="ar"] input, [lang="ar"] textarea,
+[lang="ar"] .btn span, [lang="ar"] .tag span,
+[lang="ar"] .nav-links a, [lang="ar"] .skill-name,
+[lang="ar"] .lang-name, [lang="ar"] .lang-level,
+[lang="ar"] .stat-label, [lang="ar"] .contact-link-label,
+[lang="ar"] .contact-link-value, [lang="ar"] .footer-text,
+[lang="ar"] .hero-title, [lang="ar"] .hero-sub,
+[lang="ar"] .section-eyebrow, [lang="ar"] .section-subtitle,
+[lang="ar"] .timeline-date, [lang="ar"] .timeline-company,
+[lang="ar"] .timeline-description, [lang="ar"] .cert-detail,
+[lang="ar"] .cert-score, [lang="ar"] .attr-item span,
+[lang="ar"] .contact-info p, [lang="ar"] .hero-badge span {
+  font-family: var(--font-ar) !important;
+  letter-spacing: 0 !important;
+}
+[lang="ar"] h1,[lang="ar"] h2,[lang="ar"] h3,
+[lang="ar"] h4,[lang="ar"] h5 {
+  font-family: var(--font-ar) !important;
+  font-style: normal !important;
+  letter-spacing: 0 !important;
+}
+[lang="ar"] .hero-tagline { font-style: normal; font-family: var(--font-ar) !important; }
+[lang="ar"] .section-eyebrow { text-transform: none; letter-spacing: 0; }
+[lang="ar"] .hero-badge { letter-spacing: 0; text-transform: none; }
+[lang="ar"] .stat-label { text-transform: none; letter-spacing: 0; }
+[lang="ar"] .contact-link-label { text-transform: none; letter-spacing: 0; }
+[lang="ar"] .form-group input, [lang="ar"] .form-group textarea { font-family: var(--font-ar) !important; text-align: right; }
+
+/* ── RTL layout fixes ── */
+[dir="rtl"] .nav-links a::after { left: auto; right: 0; }
+[dir="rtl"] .timeline::before { left: auto; right: 50%; transform: translateX(50%); }
+[dir="rtl"] .timeline-item:nth-child(odd) { left: auto; right: 0; text-align: left; }
+[dir="rtl"] .timeline-item:nth-child(even) { left: auto; right: 50%; text-align: right; }
+[dir="rtl"] .timeline-item:nth-child(odd) .timeline-dot { right: auto; left: -9px; }
+[dir="rtl"] .timeline-item:nth-child(even) .timeline-dot { left: auto; right: -9px; }
+[dir="rtl"] .cert-card::before { left: auto; right: 0; }
+[dir="rtl"] .skill-item:hover { transform: translateX(-4px); }
+[dir="rtl"] .contact-link:hover { transform: translateX(-5px); }
+[dir="rtl"] .timeline-description li { padding-left: 0; padding-right: 1.1rem; }
+[dir="rtl"] .timeline-description li::before { left: auto; right: 0; }
+[dir="rtl"] .about-text { text-align: right; }
+[dir="rtl"] .info-item { flex-direction: row-reverse; justify-content: flex-end; }
+[dir="rtl"] .skills-category-title { flex-direction: row-reverse; }
+[dir="rtl"] .contact-link { flex-direction: row-reverse; }
+[dir="rtl"] .contact-link-text { text-align: right; }
+[dir="rtl"] .attr-item { flex-direction: row-reverse; }
+[dir="rtl"] .hero-badge { flex-direction: row-reverse; }
+[dir="rtl"] .btn { flex-direction: row-reverse; }
+[dir="rtl"] .footer-content { flex-direction: row-reverse; }
+[dir="rtl"] .skill-header { flex-direction: row-reverse; }
+[dir="rtl"] .lang-item { flex-direction: row-reverse; }
+@media (max-width: 768px) {
+  [dir="rtl"] .timeline::before { right: 18px; left: auto; transform: none; }
+  [dir="rtl"] .timeline-item { right: 0 !important; left: auto !important; padding-right: 55px; padding-left: 0; text-align: right !important; }
+  [dir="rtl"] .timeline-dot { right: 8px !important; left: auto !important; }
+}
+
+/* ── BASE ── */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--text); line-height: 1.65; transition: background 0.3s var(--ease), color 0.3s var(--ease); }
+h1,h2,h3,h4,h5 { font-family: var(--font-heading); line-height: 1.2; }
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; height: auto; }
+.container { max-width: var(--max-w); margin: 0 auto; padding: 0 2rem; }
+
+/* ── NAVBAR ── */
+.navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: var(--navbar-bg); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); transition: all 0.3s var(--ease); }
+.navbar.scrolled { box-shadow: var(--shadow-md); }
+.nav-container { display: flex; justify-content: space-between; align-items: center; padding: 0.9rem 2rem; max-width: var(--max-w); margin: 0 auto; }
+.nav-logo { font-family: var(--font-heading); font-size: 1.45rem; font-weight: 700; color: var(--primary); letter-spacing: 0.02em; }
+[lang="ar"] .nav-logo { font-family: var(--font-ar) !important; letter-spacing: 0; }
+[data-theme="dark"] .nav-logo { color: var(--accent); }
+.nav-logo span { color: var(--accent); }
+.nav-links { display: flex; gap: 1.6rem; list-style: none; align-items: center; }
+.nav-links a { font-size: 0.9rem; font-weight: 500; color: var(--text-sec); position: relative; padding: 0.4rem 0; transition: color 0.2s; }
+.nav-links a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--accent); transition: width 0.25s var(--ease); }
+.nav-links a:hover { color: var(--primary); }
+[data-theme="dark"] .nav-links a:hover { color: var(--accent); }
+.nav-links a:hover::after { width: 100%; }
+.nav-controls { display: flex; gap: 0.6rem; align-items: center; }
+.theme-toggle, .lang-toggle { background: none; border: 1.5px solid var(--accent); color: var(--accent); width: 38px; height: 38px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 0.8rem; transition: all 0.2s; font-family: var(--font-body); }
+.theme-toggle:hover, .lang-toggle:hover { background: var(--accent); color: var(--primary-dark); }
+.theme-toggle:hover { transform: rotate(180deg); }
+.mobile-menu-btn { display: none; background: none; border: none; font-size: 1.4rem; color: var(--text); cursor: pointer; }
+
+/* ── HERO ── */
+.hero { min-height: 100vh; background: var(--hero-bg); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23c8a84b' fill-opacity='0.04'%3E%3Cpath d='M0 0h40v40H0V0zm40 40h40v40H40V40z'/%3E%3C/g%3E%3C/svg%3E"); }
+.hero::after { content: ''; position: absolute; width: 700px; height: 700px; border-radius: 50%; background: radial-gradient(circle, rgba(91,163,208,0.12) 0%, transparent 70%); top: -200px; right: -200px; pointer-events: none; }
+.hero-content { text-align: center; color: #fff; z-index: 1; padding: 2rem; max-width: 720px; }
+.hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(200,168,75,0.15); border: 1px solid rgba(200,168,75,0.4); color: var(--accent-light); padding: 0.45rem 1.2rem; border-radius: 50px; font-size: 0.82rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1.8rem; }
+.hero-avatar { width: 170px; height: 170px; border-radius: 50%; border: 3px solid var(--accent); margin: 0 auto 1.8rem; box-shadow: var(--shadow-gold), 0 0 0 8px rgba(200,168,75,0.1); background: var(--bg-card); display: flex; align-items: center; justify-content: center; font-size: 4rem; color: var(--accent); overflow: hidden; }
+.hero-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center top; border-radius: 50%; }
+.hero-name { font-size: clamp(2.4rem, 6vw, 3.8rem); font-weight: 700; letter-spacing: -0.02em; margin-bottom: 0.6rem; }
+[lang="ar"] .hero-name { letter-spacing: 0; }
+.hero-title { font-size: clamp(1rem, 2.5vw, 1.3rem); color: var(--accent-light); font-family: var(--font-body); font-weight: 400; margin-bottom: 1.4rem; letter-spacing: 0.04em; }
+.hero-tagline { font-family: var(--font-heading); font-style: italic; font-size: 1.15rem; opacity: 0.8; margin-bottom: 0.4rem; max-width: 520px; margin-left: auto; margin-right: auto; }
+.hero-sub { font-size: 0.9rem; opacity: 0.55; margin-bottom: 2.2rem; }
+.hero-cta { display: inline-flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+.btn { padding: 0.85rem 2rem; border-radius: 50px; font-weight: 600; font-size: 0.95rem; cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; gap: 0.5rem; border: none; font-family: var(--font-body); }
+.btn-primary { background: var(--accent); color: var(--primary-dark); }
+.btn-primary:hover { background: var(--accent-light); transform: translateY(-2px); box-shadow: var(--shadow-gold); }
+.btn-outline { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.5); }
+.btn-outline:hover { background: rgba(255,255,255,0.1); border-color: var(--accent); color: var(--accent-light); transform: translateY(-2px); }
+.scroll-indicator { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); animation: bounce 2.2s infinite; }
+.scroll-indicator i { color: var(--accent); font-size: 1.4rem; }
+@keyframes bounce { 0%,20%,50%,80%,100% { transform: translateX(-50%) translateY(0); } 40% { transform: translateX(-50%) translateY(-10px); } 60% { transform: translateX(-50%) translateY(-5px); } }
+
+/* ── SECTIONS ── */
+section { padding: var(--section-pad) 0; }
+.section-header { text-align: center; margin-bottom: 3.5rem; }
+.section-eyebrow { display: inline-block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem; }
+.section-title { font-size: clamp(1.9rem, 4vw, 2.6rem); color: var(--text); position: relative; display: inline-block; }
+.section-title::after { content: ''; position: absolute; bottom: -0.5rem; left: 50%; transform: translateX(-50%); width: 50px; height: 2.5px; background: var(--accent); border-radius: 2px; }
+.section-subtitle { color: var(--text-muted); margin: 1.4rem auto 0; max-width: 560px; font-size: 1.05rem; }
+
+/* ── ABOUT ── */
+.about { background: var(--bg-alt); }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; max-width: 1000px; margin: 0 auto; align-items: start; }
+.about-text { font-size: 1.05rem; line-height: 1.9; color: var(--text-sec); }
+.about-text p { margin-bottom: 1.2rem; }
+.about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+.stat-card { background: var(--bg-card); padding: 1.4rem 1.2rem; border-radius: 12px; border: 1px solid var(--border); text-align: center; box-shadow: var(--shadow-sm); transition: transform 0.2s, box-shadow 0.2s; }
+.stat-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.stat-number { font-family: var(--font-heading); font-size: 2rem; font-weight: 700; color: var(--accent); }
+.stat-label { font-size: 0.82rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 0.2rem; }
+.info-list { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; }
+.info-item { display: flex; align-items: center; gap: 0.75rem; font-size: 0.95rem; color: var(--text-sec); }
+.info-item i { color: var(--accent); width: 18px; flex-shrink: 0; }
+
+/* ── TIMELINE ── */
+.timeline { position: relative; max-width: 860px; margin: 0 auto; }
+.timeline::before { content: ''; position: absolute; left: 50%; transform: translateX(-50%); width: 2px; height: 100%; background: linear-gradient(to bottom, var(--accent), var(--sky), var(--accent)); }
+.timeline-item { position: relative; margin-bottom: 2.8rem; width: 50%; padding: 0 3rem; }
+.timeline-item:nth-child(odd) { left: 0; text-align: right; }
+.timeline-item:nth-child(even) { left: 50%; text-align: left; }
+.timeline-dot { position: absolute; width: 18px; height: 18px; background: var(--accent); border-radius: 50%; top: 10px; border: 3px solid var(--bg); box-shadow: var(--shadow-gold); }
+.timeline-item:nth-child(odd) .timeline-dot { right: -9px; }
+.timeline-item:nth-child(even) .timeline-dot { left: -9px; }
+.timeline-content { background: var(--bg-card); padding: 1.4rem 1.75rem; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border); transition: transform 0.2s, box-shadow 0.2s; }
+.timeline-content:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.timeline-date { color: var(--accent); font-weight: 600; font-size: 0.85rem; margin-bottom: 0.4rem; }
+.timeline-title { font-size: 1.2rem; color: var(--text); margin-bottom: 0.2rem; }
+.timeline-company { color: var(--sky); font-size: 0.9rem; margin-bottom: 0.8rem; font-weight: 500; }
+.timeline-description { color: var(--text-sec); font-size: 0.92rem; line-height: 1.75; }
+.timeline-description ul { list-style: none; padding: 0; }
+.timeline-description li { position: relative; padding-left: 1.1rem; margin-bottom: 0.35rem; }
+.timeline-description li::before { content: '✦'; position: absolute; left: 0; color: var(--accent); font-size: 0.6rem; top: 0.28rem; }
+
+/* ── CERTS ── */
+.certs { background: var(--bg-alt); }
+.certs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 0 auto; }
+.cert-card { background: var(--bg-card); padding: 1.8rem; border-radius: 14px; border: 1px solid var(--border); box-shadow: var(--shadow-sm); position: relative; overflow: hidden; transition: transform 0.2s, box-shadow 0.2s; }
+.cert-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, var(--accent), var(--sky)); }
+.cert-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+.cert-icon { font-size: 2rem; color: var(--accent); margin-bottom: 0.9rem; }
+.cert-name { font-size: 1.05rem; font-family: var(--font-heading); font-weight: 600; color: var(--text); margin-bottom: 0.3rem; }
+[lang="ar"] .cert-name { font-family: var(--font-ar) !important; }
+.cert-detail { font-size: 0.85rem; color: var(--text-muted); }
+.cert-score { display: inline-block; margin-top: 0.6rem; background: rgba(200,168,75,0.12); color: var(--accent); padding: 0.25rem 0.75rem; border-radius: 50px; font-size: 0.8rem; font-weight: 600; }
+
+/* ── SKILLS ── */
+.skills-container { max-width: 880px; margin: 0 auto; }
+.skills-category { margin-bottom: 3rem; }
+.skills-category-title { font-size: 1.15rem; color: var(--text); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.7rem; font-family: var(--font-heading); font-weight: 600; }
+[lang="ar"] .skills-category-title { font-family: var(--font-ar) !important; }
+.skills-category-title i { color: var(--accent); font-size: 1rem; }
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; }
+.skill-item { background: var(--bg-card); padding: 1.1rem 1.2rem; border-radius: 10px; border: 1px solid var(--border); transition: border-color 0.2s, transform 0.2s; }
+.skill-item:hover { border-color: var(--accent); transform: translateX(4px); }
+.skill-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.65rem; }
+.skill-name { font-weight: 500; color: var(--text); font-size: 0.93rem; }
+.skill-percentage { color: var(--accent); font-weight: 600; font-size: 0.85rem; }
+.skill-bar { height: 6px; background: var(--bg-alt); border-radius: 3px; overflow: hidden; }
+.skill-progress { height: 100%; width: 0; background: linear-gradient(90deg, var(--accent), var(--accent-light)); border-radius: 3px; transition: width 1.2s var(--ease); }
+.tags { display: flex; flex-wrap: wrap; gap: 0.65rem; margin-top: 0.8rem; }
+.tag { background: var(--bg-card); color: var(--text-sec); padding: 0.45rem 1rem; border-radius: 50px; font-size: 0.87rem; border: 1px solid var(--border); transition: all 0.2s; cursor: default; display: inline-flex; align-items: center; gap: 0.3rem; }
+.tag:hover { background: var(--accent); color: var(--primary-dark); border-color: var(--accent); transform: translateY(-2px); }
+.lang-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-top: 0.8rem; }
+.lang-item { background: var(--bg-card); padding: 0.9rem 1.2rem; border-radius: 10px; border: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+.lang-name { font-weight: 600; color: var(--text); font-size: 0.93rem; }
+.lang-level { color: var(--sky); font-size: 0.82rem; font-weight: 500; }
+.attrs-grid { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.8rem; }
+.attr-item { display: flex; align-items: center; gap: 0.5rem; background: var(--bg-card); padding: 0.65rem 1.1rem; border-radius: 50px; border: 1px solid var(--border); color: var(--text-sec); font-size: 0.88rem; transition: all 0.2s; }
+.attr-item:hover { border-color: var(--accent); color: var(--accent); }
+.attr-item i { color: var(--accent); font-size: 0.85rem; flex-shrink: 0; }
+
+/* ── CONTACT ── */
+.contact { background: var(--bg-alt); }
+.contact-content { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; max-width: 940px; margin: 0 auto; }
+.contact-info h3 { font-size: 1.55rem; margin-bottom: 0.75rem; color: var(--text); }
+.contact-info p { color: var(--text-sec); margin-bottom: 1.8rem; font-size: 0.95rem; }
+.contact-links { display: flex; flex-direction: column; gap: 0.9rem; }
+.contact-link { display: flex; align-items: center; gap: 1rem; padding: 0.9rem 1.3rem; background: var(--bg-card); border-radius: 10px; border: 1px solid var(--border); transition: all 0.2s; }
+.contact-link:hover { transform: translateX(5px); border-color: var(--accent); box-shadow: var(--shadow-md); }
+.contact-link i { font-size: 1.1rem; color: var(--accent); width: 22px; flex-shrink: 0; }
+.contact-link-label { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+.contact-link-value { font-weight: 600; color: var(--text); font-size: 0.92rem; }
+.contact-form { background: var(--bg-card); padding: 1.8rem; border-radius: 14px; box-shadow: var(--shadow-md); border: 1px solid var(--border); }
+.form-group { margin-bottom: 1.3rem; }
+.form-group label { display: block; margin-bottom: 0.45rem; font-weight: 500; font-size: 0.9rem; color: var(--text); }
+.form-group input, .form-group textarea { width: 100%; padding: 0.8rem 1rem; border: 1px solid var(--border); border-radius: 8px; background: var(--bg); color: var(--text); font-family: var(--font-body); font-size: 0.95rem; transition: all 0.2s; }
+.form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(200,168,75,0.15); }
+.form-group textarea { resize: vertical; min-height: 110px; }
+.btn-full { width: 100%; justify-content: center; }
+
+/* ── FOOTER ── */
+.footer { background: var(--primary-dark); color: #fff; padding: 1.8rem 0; }
+.footer-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.footer-text { opacity: 0.6; font-size: 0.88rem; }
+.footer-social { display: flex; gap: 0.8rem; }
+.footer-social a { width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
+.footer-social a:hover { background: var(--accent); color: var(--primary-dark); transform: translateY(-3px); }
+
+/* ── ANIMATIONS ── */
+.fade-in { opacity: 0; transform: translateY(26px); transition: opacity 0.65s var(--ease), transform 0.65s var(--ease); }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+.timeline-item:nth-child(1).fade-in { transition-delay: 0s; }
+.timeline-item:nth-child(2).fade-in { transition-delay: 0.1s; }
+.cert-card:nth-child(1).fade-in { transition-delay: 0s; }
+.cert-card:nth-child(2).fade-in { transition-delay: 0.1s; }
+.cert-card:nth-child(3).fade-in { transition-delay: 0.18s; }
+.cert-card:nth-child(4).fade-in { transition-delay: 0.26s; }
+.hero-badge { animation: heroFadeUp 0.7s 0s var(--ease) both; }
+.hero-avatar { animation: heroScaleIn 0.9s 0.1s var(--ease) both; }
+.hero-name { animation: heroFadeUp 0.75s 0.2s var(--ease) both; }
+.hero-title { animation: heroFadeUp 0.75s 0.3s var(--ease) both; }
+.hero-tagline,.hero-sub { animation: heroFadeUp 0.75s 0.4s var(--ease) both; }
+.hero-cta { animation: heroFadeUp 0.75s 0.52s var(--ease) both; }
+@keyframes heroScaleIn { from { opacity: 0; transform: scale(0.78); } to { opacity: 1; transform: scale(1); } }
+@keyframes heroFadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  :root { --section-pad: 3.5rem; }
+  .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--bg); flex-direction: column; padding: 1rem; border-bottom: 1px solid var(--border); gap: 0; }
+  .nav-links.active { display: flex; }
+  .nav-links li { width: 100%; }
+  .nav-links a { display: block; padding: 0.9rem 1rem; border-bottom: 1px solid var(--border); }
+  .nav-links a::after { display: none; }
+  .mobile-menu-btn { display: block; }
+  .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .timeline::before { left: 18px; }
+  .timeline-item { width: 100%; left: 0 !important; padding-left: 55px; padding-right: 0; text-align: left !important; }
+  .timeline-dot { left: 8px !important; right: auto !important; }
+  .contact-content { grid-template-columns: 1fr; gap: 2rem; }
+  .hero-cta { flex-direction: column; align-items: center; }
+  .btn { width: 100%; max-width: 280px; justify-content: center; }
+  .about-stats { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+  .container { padding: 0 1rem; }
+  .hero-avatar { width: 140px; height: 140px; font-size: 3rem; }
+  .skills-grid { grid-template-columns: 1fr; }
+  .about-stats { grid-template-columns: 1fr; }
+}
+@media print {
+  .navbar,.scroll-indicator,.theme-toggle,.lang-toggle,.mobile-menu-btn,.hero-cta,.contact-form,.footer-social { display: none !important; }
+  .hero { min-height: auto; padding: 2rem 0; }
+  section { padding: 2rem 0; page-break-inside: avoid; }
+  body { background: white !important; color: black !important; }
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="#" class="nav-logo" id="navLogo">Mohammed <span>Al-Zeetry</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about" data-i18n="nav.about">About</a></li>
+      <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+      <li><a href="#certifications" data-i18n="nav.certifications">Certifications</a></li>
+      <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+      <li>
+        <div class="nav-controls">
+          <button class="lang-toggle" id="langToggle" aria-label="Toggle language">AR</button>
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+        </div>
+      </li>
+    </ul>
+    <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="hero-content">
+    <div class="hero-badge"><i class="fas fa-plane"></i><span data-i18n="hero.badge">Cabin Crew Applicant</span></div>
+<div class="hero-avatar">
+  <img src="profile.jpeg" alt="Mohammed Al-Zeetry">
+</div>    <h1 class="hero-name" data-i18n="hero.name">Mohammed Mustafa Al-Zeetry</h1>
+    <p class="hero-title" data-i18n="hero.title">Aviation Hospitality | Customer Service Excellence</p>
+    <p class="hero-tagline" data-i18n="hero.tagline">"Delivering safety, comfort, and warmth at 35,000 feet."</p>
+    <p class="hero-sub" data-i18n="hero.sub">Tripoli, Libya · Civil Aviation Exam: 91%</p>
+    <div class="hero-cta">
+
+      <a href="#skills" class="btn btn-outline"><i class="fas fa-star"></i><span data-i18n="hero.cta2">View My Profile</span></a>
+    </div>
+  </div>
+  <div class="scroll-indicator"><i class="fas fa-chevron-down"></i></div>
+</header>
+
+<section class="about" id="about">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-eyebrow" data-i18n="about.eyebrow">Who I Am</span>
+      <h2 class="section-title" data-i18n="about.title">About Me</h2>
+      <p class="section-subtitle" data-i18n="about.subtitle">A dedicated, service-oriented professional ready to take flight.</p>
+    </div>
+    <div class="about-grid fade-in">
+      <div>
+        <div class="about-text">
+          <p data-i18n="about.p1">I am a motivated and customer-focused individual with a genuine passion for delivering outstanding passenger experiences. I hold an Aviation Hospitality Certificate and passed the Civil Aviation Exam with a score of 91%, demonstrating my commitment to the highest standards of the industry.</p>
+          <p data-i18n="about.p2">My background in hotel reception and store management has equipped me with strong interpersonal skills, the ability to work gracefully under pressure, and deep experience in multicultural environments — all qualities that translate directly into exceptional cabin crew performance.</p>
+          <p data-i18n="about.p3">I am calm, professional, and a fast learner. I hold a valid passport and am fully willing to relocate and travel internationally for extended periods.</p>
+        </div>
+        <div class="info-list">
+          <div class="info-item"><i class="fas fa-map-marker-alt"></i><span data-i18n="about.info.location">Tripoli, Libya</span></div>
+          <div class="info-item"><i class="fas fa-flag"></i><span data-i18n="about.info.nationality">Libyan Nationality</span></div>
+          <div class="info-item"><i class="fas fa-birthday-cake"></i><span data-i18n="about.info.dob">Born 2003 (23 years old)</span></div>
+          <div class="info-item"><i class="fas fa-passport"></i><span data-i18n="about.info.passport">Valid Passport</span></div>
+          <div class="info-item"><i class="fas fa-car"></i><span data-i18n="about.info.license">Valid Driving License</span></div>
+          <div class="info-item"><i class="fas fa-globe"></i><span data-i18n="about.info.travel">Willing to relocate internationally</span></div>
+        </div>
+      </div>
+      <div class="about-stats">
+        <div class="stat-card"><div class="stat-number">91%</div><div class="stat-label" data-i18n="about.stat1">Civil Aviation Exam</div></div>
+        <div class="stat-card"><div class="stat-number">1 <span data-i18n="about.stat2.unit">yr</span></div><div class="stat-label" data-i18n="about.stat2.label">Hospitality Experience</div></div>
+        <div class="stat-card"><div class="stat-number">2</div><div class="stat-label" data-i18n="about.stat3">Languages</div></div>
+        <div class="stat-card"><div class="stat-number">✈</div><div class="stat-label" data-i18n="about.stat4">Ready to Fly</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="experience" id="experience">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-eyebrow" data-i18n="exp.eyebrow">Work History</span>
+      <h2 class="section-title" data-i18n="exp.title">Experience</h2>
+      <p class="section-subtitle" data-i18n="exp.subtitle">Building skills that translate directly into cabin crew excellence.</p>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item fade-in">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-date" data-i18n="exp.job1.date">1 Year · Recent</div>
+          <h3 class="timeline-title" data-i18n="exp.job1.title">Hotel Receptionist & Store Manager</h3>
+          <div class="timeline-company" data-i18n="exp.job1.company">Hospitality & Retail Sector · Tripoli, Libya</div>
+          <div class="timeline-description">
+            <ul>
+              <li data-i18n="exp.job1.t1">Handled guest check-ins and provided exceptional customer service</li>
+              <li data-i18n="exp.job1.t2">Managed daily store operations and inventory control</li>
+              <li data-i18n="exp.job1.t3">Resolved customer issues efficiently and professionally</li>
+              <li data-i18n="exp.job1.t4">Performed calmly under pressure in fast-paced environments</li>
+              <li data-i18n="exp.job1.t5">Communicated effectively with diverse, multicultural clientele</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="certs" id="certifications">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-eyebrow" data-i18n="certs.eyebrow">Qualifications</span>
+      <h2 class="section-title" data-i18n="certs.title">Certifications</h2>
+      <p class="section-subtitle" data-i18n="certs.subtitle">Formally trained and exam-certified for the aviation industry.</p>
+    </div>
+    <div class="certs-grid">
+      <div class="cert-card fade-in">
+        <div class="cert-icon"><i class="fas fa-plane-departure"></i></div>
+        <div class="cert-name" data-i18n="certs.c1.name">Cabin Crew / Aviation Hospitality Certificate</div>
+        <div class="cert-detail" data-i18n="certs.c1.detail">Professional certification in aviation hospitality and cabin crew operations</div>
+      </div>
+      <div class="cert-card fade-in">
+        <div class="cert-icon"><i class="fas fa-award"></i></div>
+        <div class="cert-name" data-i18n="certs.c2.name">Civil Aviation Examination</div>
+        <div class="cert-detail" data-i18n="certs.c2.detail">Passed the official Civil Aviation licensing exam</div>
+        <div class="cert-score" data-i18n="certs.c2.score">Score: 91%</div>
+      </div>
+      <div class="cert-card fade-in">
+        <div class="cert-icon"><i class="fas fa-graduation-cap"></i></div>
+        <div class="cert-name" data-i18n="certs.c3.name">Bachelor's in Business Administration</div>
+        <div class="cert-detail" data-i18n="certs.c3.detail">Academic foundation in business, management, and organisational behaviour</div>
+      </div>
+      <div class="cert-card fade-in">
+        <div class="cert-icon"><i class="fas fa-car-side"></i></div>
+        <div class="cert-name" data-i18n="certs.c4.name">Driving License</div>
+        <div class="cert-detail" data-i18n="certs.c4.detail">Valid driving license — flexibility for ground operations and logistics</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="skills" id="skills">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-eyebrow" data-i18n="skills.eyebrow">Capabilities</span>
+      <h2 class="section-title" data-i18n="skills.title">Skills &amp; Attributes</h2>
+      <p class="section-subtitle" data-i18n="skills.subtitle">The qualities that define an outstanding crew member.</p>
+    </div>
+    <div class="skills-container">
+      <div class="skills-category fade-in">
+        <h3 class="skills-category-title"><i class="fas fa-star"></i><span data-i18n="skills.cat1">Core Cabin Crew Skills</span></h3>
+        <div class="skills-grid">
+          <div class="skill-item"><div class="skill-header"><span class="skill-name" data-i18n="skills.s1">Customer Service</span><span class="skill-percentage">95%</span></div><div class="skill-bar"><div class="skill-progress" data-skill="95"></div></div></div>
+          <div class="skill-item"><div class="skill-header"><span class="skill-name" data-i18n="skills.s2">Teamwork &amp; Collaboration</span><span class="skill-percentage">92%</span></div><div class="skill-bar"><div class="skill-progress" data-skill="92"></div></div></div>
+          <div class="skill-item"><div class="skill-header"><span class="skill-name" data-i18n="skills.s3">Problem Solving Under Pressure</span><span class="skill-percentage">90%</span></div><div class="skill-bar"><div class="skill-progress" data-skill="90"></div></div></div>
+          <div class="skill-item"><div class="skill-header"><span class="skill-name" data-i18n="skills.s4">Communication Skills</span><span class="skill-percentage">90%</span></div><div class="skill-bar"><div class="skill-progress" data-skill="90"></div></div></div>
+          <div class="skill-item"><div class="skill-header"><span class="skill-name" data-i18n="skills.s5">Multicultural Awareness</span><span class="skill-percentage">88%</span></div><div class="skill-bar"><div class="skill-progress" data-skill="88"></div></div></div>
+          <div class="skill-item"><div class="skill-header"><span class="skill-name" data-i18n="skills.s6">Time Management</span><span class="skill-percentage">87%</span></div><div class="skill-bar"><div class="skill-progress" data-skill="87"></div></div></div>
+        </div>
+      </div>
+      <div class="skills-category fade-in">
+        <h3 class="skills-category-title"><i class="fas fa-language"></i><span data-i18n="skills.cat2">Languages</span></h3>
+        <div class="lang-grid">
+          <div class="lang-item"><span class="lang-name" data-i18n="skills.lang1.name">Arabic</span><span class="lang-level" data-i18n="skills.lang1.level">Native</span></div>
+          <div class="lang-item"><span class="lang-name" data-i18n="skills.lang2.name">English</span><span class="lang-level" data-i18n="skills.lang2.level">Conversational – Good</span></div>
+        </div>
+      </div>
+      <div class="skills-category fade-in">
+        <h3 class="skills-category-title"><i class="fas fa-heart"></i><span data-i18n="skills.cat3">Personal Attributes</span></h3>
+        <div class="attrs-grid">
+          <div class="attr-item"><i class="fas fa-peace"></i><span data-i18n="skills.a1">Calm Under Pressure</span></div>
+          <div class="attr-item"><i class="fas fa-smile"></i><span data-i18n="skills.a2">Friendly &amp; Professional</span></div>
+          <div class="attr-item"><i class="fas fa-bolt"></i><span data-i18n="skills.a3">Fast Learner</span></div>
+          <div class="attr-item"><i class="fas fa-sync-alt"></i><span data-i18n="skills.a4">Adaptable</span></div>
+          <div class="attr-item"><i class="fas fa-shield-alt"></i><span data-i18n="skills.a5">Responsible &amp; Disciplined</span></div>
+          <div class="attr-item"><i class="fas fa-users"></i><span data-i18n="skills.a6">Team Player</span></div>
+          <div class="attr-item"><i class="fas fa-globe-africa"></i><span data-i18n="skills.a7">Global Mindset</span></div>
+        </div>
+      </div>
+      <div class="skills-category fade-in">
+        <h3 class="skills-category-title"><i class="fas fa-plane"></i><span data-i18n="skills.cat4">Availability &amp; Mobility</span></h3>
+        <div class="tags">
+          <span class="tag"><i class="fas fa-check" style="color:var(--accent)"></i><span data-i18n="skills.avail1">Willing to Relocate</span></span>
+          <span class="tag"><i class="fas fa-check" style="color:var(--accent)"></i><span data-i18n="skills.avail2">International Travel Ready</span></span>
+          <span class="tag"><i class="fas fa-check" style="color:var(--accent)"></i><span data-i18n="skills.avail3">Valid Passport</span></span>
+          <span class="tag"><i class="fas fa-check" style="color:var(--accent)"></i><span data-i18n="skills.avail4">Long-haul Availability</span></span>
+          <span class="tag"><i class="fas fa-check" style="color:var(--accent)"></i><span data-i18n="skills.avail5">Flexible Schedule</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-eyebrow" data-i18n="contact.eyebrow">Reach Out</span>
+      <h2 class="section-title" data-i18n="contact.title">Contact</h2>
+      <p class="section-subtitle" data-i18n="contact.subtitle">Ready for an interview or further discussion — let's connect.</p>
+    </div>
+    <div class="contact-content">
+      <div class="contact-info fade-in">
+        <p data-i18n="contact.text">I'm actively seeking a Cabin Crew position with a reputable airline. If you represent an airline or recruitment agency, I'd love to hear from you.</p>
+        <div class="contact-links">
+          <div class="contact-link"><i class="fas fa-map-marker-alt"></i><div class="contact-link-text"><span class="contact-link-label" data-i18n="contact.l1.label">Location</span><span class="contact-link-value" data-i18n="contact.l1.value">Tripoli, Libya</span></div></div>
+          <div class="contact-link"><i class="fas fa-passport"></i><div class="contact-link-text"><span class="contact-link-label" data-i18n="contact.l2.label">Passport Status</span><span class="contact-link-value" data-i18n="contact.l2.value">Valid – Ready to Travel</span></div></div>
+          <div class="contact-link"><i class="fas fa-plane"></i><div class="contact-link-text"><span class="contact-link-label" data-i18n="contact.l3.label">Position Sought</span><span class="contact-link-value" data-i18n="contact.l3.value">Cabin Crew / Flight Attendant</span></div></div>
+        </div>
+      </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <p class="footer-text" data-i18n="footer.copy">© 2025 Mohammed Mustafa Al-Zeetry. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="#contact" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const T = {
+  en: {
+    "nav.about":"About","nav.experience":"Experience","nav.certifications":"Certifications","nav.skills":"Skills","nav.contact":"Contact",
+    "hero.badge":"Cabin Crew Applicant","hero.name":"Mohammed Mustafa Al-Zeetry",
+    "hero.title":"Aviation Hospitality | Customer Service Excellence",
+    "hero.tagline":'"Delivering safety, comfort, and warmth at 35,000 feet."',
+    "hero.sub":"Tripoli, Libya · Civil Aviation Exam: 91%","hero.cta1":"Get in Touch","hero.cta2":"View My Profile",
+    "about.eyebrow":"Who I Am","about.title":"About Me","about.subtitle":"A dedicated, service-oriented professional ready to take flight.",
+    "about.p1":"I am a motivated and customer-focused individual with a genuine passion for delivering outstanding passenger experiences. I hold an Aviation Hospitality Certificate and passed the Civil Aviation Exam with a score of 91%, demonstrating my commitment to the highest standards of the industry.",
+    "about.p2":"My background in hotel reception and store management has equipped me with strong interpersonal skills, the ability to work gracefully under pressure, and deep experience in multicultural environments — all qualities that translate directly into exceptional cabin crew performance.",
+    "about.p3":"I am calm, professional, and a fast learner. I hold a valid passport and am fully willing to relocate and travel internationally for extended periods.",
+    "about.info.location":"Tripoli, Libya","about.info.nationality":"Libyan Nationality","about.info.dob":"Born 2003 (23 years old)","about.info.passport":"Valid Passport","about.info.license":"Valid Driving License","about.info.travel":"Willing to relocate internationally",
+    "about.stat1":"Civil Aviation Exam","about.stat2.unit":"yr","about.stat2.label":"Hospitality Experience","about.stat3":"Languages","about.stat4":"Ready to Fly",
+    "exp.eyebrow":"Work History","exp.title":"Experience","exp.subtitle":"Building skills that translate directly into cabin crew excellence.",
+    "exp.job1.date":"1 Year · Recent","exp.job1.title":"Hotel Receptionist & Store Manager","exp.job1.company":"Hospitality & Retail Sector · Tripoli, Libya",
+    "exp.job1.t1":"Handled guest check-ins and provided exceptional customer service",
+    "exp.job1.t2":"Managed daily store operations and inventory control",
+    "exp.job1.t3":"Resolved customer issues efficiently and professionally",
+    "exp.job1.t4":"Performed calmly under pressure in fast-paced environments",
+    "exp.job1.t5":"Communicated effectively with diverse, multicultural clientele",
+    "certs.eyebrow":"Qualifications","certs.title":"Certifications","certs.subtitle":"Formally trained and exam-certified for the aviation industry.",
+    "certs.c1.name":"Cabin Crew / Aviation Hospitality Certificate","certs.c1.detail":"Professional certification in aviation hospitality and cabin crew operations",
+    "certs.c2.name":"Civil Aviation Examination","certs.c2.detail":"Passed the official Civil Aviation licensing exam","certs.c2.score":"Score: 91%",
+    "certs.c3.name":"Bachelor's in Business Administration","certs.c3.detail":"Academic foundation in business, management, and organisational behaviour",
+    "certs.c4.name":"Driving License","certs.c4.detail":"Valid driving license — flexibility for ground operations and logistics",
+    "skills.eyebrow":"Capabilities","skills.title":"Skills & Attributes","skills.subtitle":"The qualities that define an outstanding crew member.",
+    "skills.cat1":"Core Cabin Crew Skills","skills.s1":"Customer Service","skills.s2":"Teamwork & Collaboration","skills.s3":"Problem Solving Under Pressure","skills.s4":"Communication Skills","skills.s5":"Multicultural Awareness","skills.s6":"Time Management",
+    "skills.cat2":"Languages","skills.lang1.name":"Arabic","skills.lang1.level":"Native","skills.lang2.name":"English","skills.lang2.level":"Conversational – Good",
+    "skills.cat3":"Personal Attributes","skills.a1":"Calm Under Pressure","skills.a2":"Friendly & Professional","skills.a3":"Fast Learner","skills.a4":"Adaptable","skills.a5":"Responsible & Disciplined","skills.a6":"Team Player","skills.a7":"Global Mindset",
+    "skills.cat4":"Availability & Mobility","skills.avail1":"Willing to Relocate","skills.avail2":"International Travel Ready","skills.avail3":"Valid Passport","skills.avail4":"Long-haul Availability","skills.avail5":"Flexible Schedule",
+    "contact.eyebrow":"Reach Out","contact.title":"Contact","contact.subtitle":"Ready for an interview or further discussion — let's connect.",
+    "contact.hello":"Say Hello!","contact.text":"I'm actively seeking a Cabin Crew position with a reputable airline. If you represent an airline or recruitment agency, I'd love to hear from you.",
+    "contact.l1.label":"Location","contact.l1.value":"Tripoli, Libya","contact.l2.label":"Passport Status","contact.l2.value":"Valid – Ready to Travel","contact.l3.label":"Position Sought","contact.l3.value":"Cabin Crew / Flight Attendant",
+    "form.name":"Your Name","form.namePh":"Full name","form.email":"Email Address","form.emailPh":"email@example.com","form.message":"Message","form.messagePh":"Your message...","form.submit":"Send Message",
+    "form.successTitle":"Message Sent!","form.successText":"Thank you for reaching out. I'll respond soon.",
+    "footer.copy":"© 2025 Mohammed Mustafa Al-Zeetry. All rights reserved."
+  },
+  ar: {
+    "nav.about":"عن المتقدم","nav.experience":"الخبرة","nav.certifications":"الشهادات","nav.skills":"المهارات","nav.contact":"التواصل",
+    "hero.badge":"متقدم لوظيفة طاقم الضيافة الجوية","hero.name":"محمد مصطفى الزعيتري",
+    "hero.title":"ضيافة جوية | تميّز في خدمة العملاء",
+    "hero.tagline":'"تقديم السلامة والراحة والدفء على ارتفاع 35,000 قدم."',
+    "hero.sub":"طرابلس، ليبيا · امتحان الطيران المدني: 91%","hero.cta1":"تواصل معي","hero.cta2":"عرض ملفي",
+    "about.eyebrow":"من أنا","about.title":"نبذة عني","about.subtitle":"محترف ملتزم موجّه نحو الخدمة، مستعدٌّ للتحليق.",
+    "about.p1":"أنا شخص متحفّز ومتمحور حول العميل، أحمل شغفاً حقيقياً بتقديم تجربة استثنائية للمسافرين. أحمل شهادة الضيافة الجوية، ونجحت في اجتياز امتحان الطيران المدني بدرجة 91%، مما يعكس التزامي بأعلى معايير الصناعة.",
+    "about.p2":"أكسبتني خبرتي في استقبال الفندق وإدارة المتاجر مهارات تواصل قوية، وقدرة على العمل باحترافية تحت الضغط، وخبرة واسعة في البيئات متعددة الثقافات — وهي صفات تنعكس مباشرة على أداء طاقم الضيافة الجوية المتميّز.",
+    "about.p3":"أتمتع بالهدوء والاحترافية، وأنا سريع التعلّم. أمتلك جواز سفر سارياً وأنا مستعدٌّ تماماً للانتقال والسفر دولياً لفترات مطوّلة.",
+    "about.info.location":"طرابلس، ليبيا","about.info.nationality":"الجنسية الليبية","about.info.dob":"مواليد 2003 (23 عاماً)","about.info.passport":"جواز سفر ساري","about.info.license":"رخصة قيادة سارية","about.info.travel":"مستعد للانتقال دولياً",
+    "about.stat1":"امتحان الطيران المدني","about.stat2.unit":"سنة","about.stat2.label":"خبرة في الضيافة","about.stat3":"لغات","about.stat4":"مستعد للتحليق",
+    "exp.eyebrow":"السيرة المهنية","exp.title":"الخبرة العملية","exp.subtitle":"بناء مهارات تنعكس مباشرة على التميّز في الضيافة الجوية.",
+    "exp.job1.date":"سنة كاملة · حديثاً","exp.job1.title":"موظف استقبال فندقي ومدير متجر","exp.job1.company":"قطاع الضيافة والتجزئة · طرابلس، ليبيا",
+    "exp.job1.t1":"إدارة استقبال الضيوف وتقديم خدمة عملاء متميّزة",
+    "exp.job1.t2":"إدارة العمليات اليومية للمتجر والتحكم في المخزون",
+    "exp.job1.t3":"حلّ مشكلات العملاء بكفاءة واحترافية",
+    "exp.job1.t4":"العمل بهدوء تحت الضغط في بيئات متسارعة",
+    "exp.job1.t5":"التواصل الفعّال مع عملاء من خلفيات ثقافية متنوعة",
+    "certs.eyebrow":"المؤهلات","certs.title":"الشهادات والمؤهلات","certs.subtitle":"مؤهَّل رسمياً ومعتمَد بالاختبار لصناعة الطيران.",
+    "certs.c1.name":"شهادة طاقم الضيافة الجوية","certs.c1.detail":"شهادة احترافية في الضيافة الجوية وعمليات طاقم الضيافة",
+    "certs.c2.name":"امتحان الطيران المدني","certs.c2.detail":"اجتياز امتحان ترخيص الطيران المدني الرسمي","certs.c2.score":"الدرجة: 91%",
+    "certs.c3.name":"بكالوريوس في إدارة الأعمال","certs.c3.detail":"أساس أكاديمي في الأعمال والإدارة والسلوك التنظيمي",
+    "certs.c4.name":"رخصة القيادة","certs.c4.detail":"رخصة قيادة سارية — مرونة إضافية للعمليات الأرضية",
+    "skills.eyebrow":"الكفاءات","skills.title":"المهارات والسمات","skills.subtitle":"الصفات التي تُعرّف عضو الطاقم المتميّز.",
+    "skills.cat1":"مهارات طاقم الضيافة الأساسية","skills.s1":"خدمة العملاء","skills.s2":"العمل الجماعي والتعاون","skills.s3":"حل المشكلات تحت الضغط","skills.s4":"مهارات التواصل","skills.s5":"الوعي بالتعدد الثقافي","skills.s6":"إدارة الوقت",
+    "skills.cat2":"اللغات","skills.lang1.name":"العربية","skills.lang1.level":"اللغة الأم","skills.lang2.name":"الإنجليزية","skills.lang2.level":"محادثة — جيد",
+    "skills.cat3":"السمات الشخصية","skills.a1":"هادئ تحت الضغط","skills.a2":"ودود واحترافي","skills.a3":"سريع التعلم","skills.a4":"قابل للتكيّف","skills.a5":"مسؤول ومنضبط","skills.a6":"لاعب فريق","skills.a7":"عقلية عالمية",
+    "skills.cat4":"التوافر والتنقّل","skills.avail1":"مستعد للانتقال","skills.avail2":"مهيّأ للسفر الدولي","skills.avail3":"جواز سفر ساري","skills.avail4":"متاح للرحلات الطويلة","skills.avail5":"جدول زمني مرن",
+    "contact.eyebrow":"تواصل معي","contact.title":"التواصل","contact.subtitle":"مستعدٌّ للمقابلة أو أي نقاش — لنتواصل.",
+    "contact.hello":"مرحباً بك!","contact.text":"أبحث بنشاط عن وظيفة ضمن طاقم الضيافة الجوية في شركة طيران مرموقة. إن كنت تمثّل شركة طيران أو وكالة توظيف، يسعدني التواصل معك.",
+    "contact.l1.label":"الموقع","contact.l1.value":"طرابلس، ليبيا","contact.l2.label":"حالة جواز السفر","contact.l2.value":"ساري — مستعد للسفر","contact.l3.label":"الوظيفة المطلوبة","contact.l3.value":"طاقم ضيافة جوية / مضيف طيران",
+    "form.name":"الاسم","form.namePh":"الاسم الكامل","form.email":"البريد الإلكتروني","form.emailPh":"email@example.com","form.message":"الرسالة","form.messagePh":"رسالتك...","form.submit":"إرسال الرسالة",
+    "form.successTitle":"تم الإرسال!","form.successText":"شكراً لتواصلك معي. سأرد في أقرب وقت ممكن.",
+    "footer.copy":"© 2025 محمد مصطفىالزعيتري. جميع الحقوق محفوظة."
+  }
+};
+
+let currentLang = localStorage.getItem('lang') || 'en';
+
+function applyLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('lang', lang);
+  const isAr = lang === 'ar';
+  document.documentElement.lang = lang;
+  document.documentElement.dir = isAr ? 'rtl' : 'ltr';
+  document.getElementById('langToggle').textContent = isAr ? 'EN' : 'AR';
+  document.getElementById('navLogo').innerHTML = isAr
+    ? 'محمد <span>الزعيتري</span>'
+    : 'Mohammed <span>Al-Zeetry</span>';
+  document.title = isAr
+    ? 'محمد الزعيتري – طاقم الضيافة الجوية'
+    : 'Mohammed Al-Zeetry – Cabin Crew Applicant';
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const v = T[lang][el.getAttribute('data-i18n')];
+    if (v !== undefined) el.textContent = v;
+  });
+  document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+    const v = T[lang][el.getAttribute('data-i18n-ph')];
+    if (v !== undefined) el.placeholder = v;
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => applyLang(currentLang));
+document.getElementById('langToggle').addEventListener('click', () => applyLang(currentLang === 'en' ? 'ar' : 'en'));
+
+// Theme
+const themeToggle = document.getElementById('themeToggle');
+const themeIcon = themeToggle.querySelector('i');
+const html = document.documentElement;
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) { html.setAttribute('data-theme', savedTheme); updateIcon(savedTheme); }
+themeToggle.addEventListener('click', () => {
+  const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  html.setAttribute('data-theme', next); localStorage.setItem('theme', next); updateIcon(next);
+});
+function updateIcon(t) { themeIcon.className = t === 'dark' ? 'fas fa-sun' : 'fas fa-moon'; }
+
+// Mobile menu
+const mobileBtn = document.getElementById('mobileMenuBtn');
+const navLinks = document.getElementById('navLinks');
+mobileBtn.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  mobileBtn.querySelector('i').className = navLinks.classList.contains('active') ? 'fas fa-times' : 'fas fa-bars';
+});
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  navLinks.classList.remove('active'); mobileBtn.querySelector('i').className = 'fas fa-bars';
+}));
+
+// Navbar scroll
+window.addEventListener('scroll', () => document.getElementById('navbar').classList.toggle('scrolled', scrollY > 50));
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', function(e) {
+  const t = document.querySelector(this.getAttribute('href'));
+  if (t) { e.preventDefault(); window.scrollTo({ top: t.offsetTop - 68, behavior: 'smooth' }); }
+}));
+
+// Fade-in
+new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }), { threshold: 0.1, rootMargin: '0px 0px -50px 0px' })
+  .observe && document.querySelectorAll('.fade-in').forEach(el =>
+    new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }), { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }).observe(el)
+  );
+
+// Skill bars
+document.querySelectorAll('.skill-progress').forEach(b =>
+  new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) e.target.style.width = e.target.getAttribute('data-skill') + '%'; }), { threshold: 0.5 }).observe(b)
+);
+
+// Contact form
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  document.getElementById('successTitle').textContent = T[currentLang]['form.successTitle'];
+  document.getElementById('successText').textContent = T[currentLang]['form.successText'];
+  this.style.display = 'none';
+  document.getElementById('formSuccess').style.display = 'block';
+});
+</script>
+</body>
+</html>
