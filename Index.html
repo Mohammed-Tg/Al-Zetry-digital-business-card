@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mohammed Al-Zeetry – Cabin Crew Applicant</title>
+<title>Mohammed Alzueitari – Cabin Crew Applicant</title>
 <meta name="description" content="Digital business card of Mohammed Mustafa Al-Zeetry – Cabin Crew Applicant">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -308,7 +308,7 @@ section { padding: var(--section-pad) 0; }
 
 <nav class="navbar" id="navbar">
   <div class="nav-container">
-    <a href="#" class="nav-logo" id="navLogo">Mohammed <span>Al-Zeetry</span></a>
+    <a href="#" class="nav-logo" id="navLogo">Mohammed <span>Alzueitari</span></a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#about" data-i18n="nav.about">About</a></li>
       <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
@@ -329,8 +329,8 @@ section { padding: var(--section-pad) 0; }
   <div class="hero-content">
     <div class="hero-badge"><i class="fas fa-plane"></i><span data-i18n="hero.badge">Cabin Crew Applicant</span></div>
 <div class="hero-avatar">
-  <img src="profile.jpeg" alt="Mohammed Al-Zeetry">
-</div>    <h1 class="hero-name" data-i18n="hero.name">Mohammed Mustafa Al-Zeetry</h1>
+  <img src="profile.jpeg" alt="Mohammed Alzueitari">
+</div>    <h1 class="hero-name" data-i18n="hero.name">Mohammed Mustafa Alzueitari</h1>
     <p class="hero-title" data-i18n="hero.title">Aviation Hospitality | Customer Service Excellence</p>
     <p class="hero-tagline" data-i18n="hero.tagline">"Delivering safety, comfort, and warmth at 35,000 feet."</p>
     <p class="hero-sub" data-i18n="hero.sub">Tripoli, Libya · Civil Aviation Exam: 91%</p>
@@ -512,7 +512,7 @@ section { padding: var(--section-pad) 0; }
 <footer class="footer">
   <div class="container">
     <div class="footer-content">
-      <p class="footer-text" data-i18n="footer.copy">© 2025 Mohammed Mustafa Al-Zeetry. All rights reserved.</p>
+      <p class="footer-text" data-i18n="footer.copy">© 2025 Mohammed Mustafa Alzueitari. All rights reserved.</p>
       <div class="footer-social">
         <a href="#contact" aria-label="Email"><i class="fas fa-envelope"></i></a>
         <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -525,7 +525,7 @@ section { padding: var(--section-pad) 0; }
 const T = {
   en: {
     "nav.about":"About","nav.experience":"Experience","nav.certifications":"Certifications","nav.skills":"Skills","nav.contact":"Contact",
-    "hero.badge":"Cabin Crew Applicant","hero.name":"Mohammed Mustafa Al-Zeetry",
+    "hero.badge":"Cabin Crew Applicant","hero.name":"Mohammed Mustafa Alzueitari",
     "hero.title":"Aviation Hospitality | Customer Service Excellence",
     "hero.tagline":'"Delivering safety, comfort, and warmth at 35,000 feet."',
     "hero.sub":"Tripoli, Libya · Civil Aviation Exam: 91%","hero.cta1":"Get in Touch","hero.cta2":"View My Profile",
@@ -557,7 +557,7 @@ const T = {
     "contact.l1.label":"Location","contact.l1.value":"Tripoli, Libya","contact.l2.label":"Passport Status","contact.l2.value":"Valid – Ready to Travel","contact.l3.label":"Position Sought","contact.l3.value":"Cabin Crew / Flight Attendant",
     "form.name":"Your Name","form.namePh":"Full name","form.email":"Email Address","form.emailPh":"email@example.com","form.message":"Message","form.messagePh":"Your message...","form.submit":"Send Message",
     "form.successTitle":"Message Sent!","form.successText":"Thank you for reaching out. I'll respond soon.",
-    "footer.copy":"© 2025 Mohammed Mustafa Al-Zeetry. All rights reserved."
+    "footer.copy":"© 2025 Mohammed Mustafa Alzueitari. All rights reserved."
   },
   ar: {
     "nav.about":"عن المتقدم","nav.experience":"الخبرة","nav.certifications":"الشهادات","nav.skills":"المهارات","nav.contact":"التواصل",
@@ -608,10 +608,10 @@ function applyLang(lang) {
   document.getElementById('langToggle').textContent = isAr ? 'EN' : 'AR';
   document.getElementById('navLogo').innerHTML = isAr
     ? 'محمد <span>الزعيتري</span>'
-    : 'Mohammed <span>Al-Zeetry</span>';
+    : 'Mohammed <span>Alzueitari</span>';
   document.title = isAr
     ? 'محمد الزعيتري – طاقم الضيافة الجوية'
-    : 'Mohammed Al-Zeetry – Cabin Crew Applicant';
+    : 'Mohammed Alzueitari – Cabin Crew Applicant';
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const v = T[lang][el.getAttribute('data-i18n')];
     if (v !== undefined) el.textContent = v;
